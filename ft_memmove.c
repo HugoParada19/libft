@@ -6,7 +6,7 @@
 /*   By: htrindad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 18:59:19 by htrindad          #+#    #+#             */
-/*   Updated: 2024/04/12 15:03:03 by htrindad         ###   ########.fr       */
+/*   Updated: 2024/04/13 13:41:23 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	if (dest > src)
 	{
 		while (n--)
-		{
 			tmp1[n] = tmp2[n];
-		}
 	}
 	return (dest);
 }
