@@ -1,18 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/13 18:12:59 by htrindad          #+#    #+#             */
-/*   Updated: 2024/04/13 18:13:03 by htrindad         ###   ########.fr       */
+/*   Created: 2024/04/13 16:06:37 by htrindad          #+#    #+#             */
+/*   Updated: 2024/04/13 17:15:19 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+#include "libft.h"
+
+int	ft_atoi(const char *nptr)
 {
-	if (c > 31 && c < 127)
-		return (1);
-	return (0);
+	int		num;
+	int		neg;
+	size_t	i;
+
+	i = 0;
+	neg = 1;
+	num = 0;
+	while (nptr[i] == 9 || nptr[i] == 32 || (nptr[i] > 8 && nptr[i] < 14))
+		i++;
+	if (nptr[i] == 45 || nptr[i] == 43)
+	{
+		if (nptr[i] == 45)
+			neg = -1;
+		i++;
+	}
+	while (nptr[i] >= 47 && nptr[i] < 58)
+	{
+		num = num * 10 + (nptr[i] - 48);
+		i++;
+	}
+	return (num * neg);
 }
