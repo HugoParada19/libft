@@ -8,8 +8,6 @@ OBJS = $(SRC:.c=.o)
 
 CFLAGS = -Wall -Wextra -Werror
 
-HEADER = libft.h
-
 all: $(NAME) clean
 
 $(NAME): $(OBJS)
