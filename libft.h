@@ -6,7 +6,7 @@
 /*   By: htrindad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 19:13:14 by htrindad          #+#    #+#             */
-/*   Updated: 2024/04/13 15:06:02 by htrindad         ###   ########.fr       */
+/*   Updated: 2024/04/13 17:25:57 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,8 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size);
 int			ft_toupper(int c);
 int			ft_tolower(int c);
 char		*ft_strchr(const char *s, int c);
+char		*ft_strdup(const char *s);
+int			ft_atoi(const char *nptr);
+char		*ft_strrchr(const char *s, int c);
 
 #endif
