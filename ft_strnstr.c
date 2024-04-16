@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 09:15:41 by htrindad          #+#    #+#             */
-/*   Updated: 2024/04/16 12:24:55 by htrindad         ###   ########.fr       */
+/*   Created: 2024/04/16 14:33:11 by htrindad          #+#    #+#             */
+/*   Updated: 2024/04/16 16:22:32 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t			i;
-	unsigned char	*str;
-	unsigned char	car;
+	size_t	i;
+	size_t	j;
 
+	if (!ft_strlen(little))
+		return ((char *)big);
 	i = 0;
-	str = (unsigned char *)s;
-	car = (unsigned char)c;
-	while (i < n - 1 && str[i] != car)
+	while (i < len && big[i])
+	{
+		j = 0;
+		if (big[i] == little[j])
+		{
+			while (little[j] == big[i + j] && i + j < len)
+				j++;
+			if (!little[j])
+				return ((char *)&big[i]);
+		}
 		i++;
-	if (str[i] == car)
-		return (&str[i]);
+	}
 	return (NULL);
 }
