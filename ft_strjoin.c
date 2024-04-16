@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/13 15:33:21 by htrindad          #+#    #+#             */
-/*   Updated: 2024/04/16 20:13:17 by htrindad         ###   ########.fr       */
+/*   Created: 2024/04/16 19:45:47 by htrindad          #+#    #+#             */
+/*   Updated: 2024/04/16 20:14:38 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*sc;
+	char	*new_str;
 
-	sc = ft_calloc(ft_strlen(s) + 1, sizeof(char));
-	if (sc == NULL)
+	if (!s1 || !s2)
 		return (NULL);
-	ft_memcpy(sc, s, ft_strlen(s));
-	return (sc);
+	new_str = ft_strdup(s1);
+	if (new_str == NULL)
+		return (NULL);
+	ft_strlcat(new_str, s2, ft_strlen(s2));
+	return (new_str);
 }
