@@ -6,7 +6,7 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 19:45:47 by htrindad          #+#    #+#             */
-/*   Updated: 2024/04/16 20:35:30 by htrindad         ###   ########.fr       */
+/*   Updated: 2024/04/16 21:58:42 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,4 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_memcpy(new_str, s1, ft_strlen(s1));
 	ft_memcpy(new_str + ft_strlen(s1), s2, ft_strlen(s2));
 	return (new_str);
-}
-
-int main()
-{
-	char *s1 = "Ola";
-	char *s2 = " adeus";
-
-	printf("%s", ft_strjoin(s1, s2));
 }
