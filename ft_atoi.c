@@ -6,7 +6,7 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 16:06:37 by htrindad          #+#    #+#             */
-/*   Updated: 2024/04/13 17:15:19 by htrindad         ###   ########.fr       */
+/*   Updated: 2024/04/18 18:22:03 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ft_atoi(const char *nptr)
 			neg = -1;
 		i++;
 	}
-	while (nptr[i] >= 47 && nptr[i] < 58)
+	while (nptr[i] > 47 && nptr[i] < 58)
 	{
 		num = num * 10 + (nptr[i] - 48);
 		i++;
