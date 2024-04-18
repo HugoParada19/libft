@@ -6,13 +6,11 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 18:12:09 by htrindad          #+#    #+#             */
-/*   Updated: 2024/04/13 18:12:28 by htrindad         ###   ########.fr       */
+/*   Updated: 2024/04/18 19:31:54 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
 {
-	if (c > -1 && c < 128)
-		return (1);
-	return (0);
+	return (c > -1 && c < 128);
 }

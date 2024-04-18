@@ -6,13 +6,11 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 18:12:21 by htrindad          #+#    #+#             */
-/*   Updated: 2024/04/13 18:12:25 by htrindad         ###   ########.fr       */
+/*   Updated: 2024/04/18 19:32:02 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int n)
 {
-	if (n > 47 && n < 58)
-		return (1);
-	return (0);
+	return (n > 47 && n < 58);
 }
