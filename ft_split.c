@@ -5,63 +5,66 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/18 19:49:30 by htrindad          #+#    #+#             */
-/*   Updated: 2024/04/19 14:12:02 by htrindad         ###   ########.fr       */
+/*   Created: 2024/04/19 15:03:34 by htrindad          #+#    #+#             */
+/*   Updated: 2024/04/19 16:15:23 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_free(char **ptr, size_t count)
+static size_t	ft_wordc(char const *s, char c)
 {
-	while (count)
-		free(ptr[count--]);
-	free(ptr);
-}
+	size_t	count;
 
-static size_t	ft_countc(char const *s, char c)
-{
-	size_t		count;
-	u_int8_t	once;
-
+	if (!s)
+		return (0);
 	count = 0;
-	once = 0;
 	while (*s)
 	{
-		if (*s == c && !once)
+		if (*s == c && *s)
 		{
-			count++;
-			once = 1;
+			while (*s == c && *s)
+				s++;
 		}
-		if (*s != c && once)
-			once = 0;
-		s++;
+		else
+		{
+			while (*s != c && *s)
+				s++;
+			count++;
+		}
 	}
 	return (count);
 }
 
-static size_t	ft_fp(char const *s, char c, size_t count)
+static void	ft_end(char const *s, char c, char **ss)
 {
-	size_t	i;
+	size_t	x;
+	size_t	y;
+	size_t	z;
 
-	i = 0;
-	while (count)
+	x = 0;
+	y = 0;
+	z = 0;
+	while (s[x])
 	{
-		if (s[i] == c)
-			count++;
-		i++;
+		if (s[x] == c)
+			x++;
+		else
+		{
+			y = x;
+			while (s[y] && s[y] != c)
+				y++;
+			ss[z++] = ft_substr(s, x, y - x);
+			x = y;
+		}
 	}
-	return (i);
 }
 
-static char	**ft_create_arr(char const *s, char c, char **ss, size_t con)
+static void	ft_free(char **ss, size_t count)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < con)
-		ss[i++] = ft_substr(s, ft_fp(s, c, con - 1), ft_fp(s, c, con));
-	return (ss);
+	while (count)
+		free(ss[count--]);
+	free(ss);
 }
 
 char	**ft_split(char const *s, char c)
@@ -69,14 +72,24 @@ char	**ft_split(char const *s, char c)
 	size_t	count;
 	char	**ss;
 
-	if (!s)
+	if (s == NULL)
 		return (NULL);
-	count = ft_countc(s, c);
+	count = ft_wordc(s, c);
 	ss = malloc(sizeof(char *) * (count + 1));
 	if (ss == NULL)
 	{
 		ft_free(ss, count);
 		return (NULL);
 	}
-	return (ft_create_arr(s, c, ss, count));
+	ft_end(s, c, ss);
+	return (ss);
 }
+/*
+int main()
+{
+	char **ss;
+
+	ss = ft_split("", ' ');
+	for (size_t i = 0; i <= ft_wordc("", ' '); i++)
+		printf("%s\n", ss[i]);
+}*/
