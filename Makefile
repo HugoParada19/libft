@@ -10,7 +10,7 @@ OBJS = $(SRC:.c=.o)
 
 CFLAGS = -Wall -Wextra -Werror -O3
 
-all: $(NAME) clean
+all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar src $(NAME) $(OBJS)
