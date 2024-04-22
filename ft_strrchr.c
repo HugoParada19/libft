@@ -6,7 +6,7 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 17:18:23 by htrindad          #+#    #+#             */
-/*   Updated: 2024/04/15 20:25:01 by htrindad         ###   ########.fr       */
+/*   Updated: 2024/04/22 18:33:10 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,15 @@ char	*ft_strrchr(const char *s, int c)
 	size_t	i;
 
 	if (!c)
-		return ((char *)&s[ft_strlen(s) + 1]);
+		return ((char *)&s[ft_strlen(s)]);
 	i = ft_strlen(s);
-	while (i && s[i] != c)
+	while (i)
+	{
+		if (s[i] == (char)c)
+			return ((char *)&s[i]);
 		i--;
-	if (s[i] == c)
+	}
+	if (s[i] == (char)c)
 		return ((char *)&s[i]);
 	return (NULL);
 }

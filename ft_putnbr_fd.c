@@ -6,11 +6,17 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 14:36:49 by htrindad          #+#    #+#             */
-/*   Updated: 2024/04/22 15:14:25 by htrindad         ###   ########.fr       */
+/*   Updated: 2024/04/22 16:35:53 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
+
+static int	ft_ao(int fd)
+{
+	ft_putstr_fd("-2", fd);
+	return (147483648);
+}
 
 static int	ft_intlen(int n)
 {
@@ -27,21 +33,34 @@ static int	ft_intlen(int n)
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	int	len;
 	int	ncopy;
 	int	i;
 
-	len = ft_intlen(n);
-	if (!len)
-		write(fd, 48, 1);
+	if (n == -2147483648)
+		n = ft_ao(fd);
+	if (!n)
+		ft_putchar_fd(48, fd);
+	else if (ft_intlen(n) == 1)
+		ft_putchar_fd(n + 48, fd);
 	else
 	{
-		ncopy = n;
 		i = -1;
-		while (++i < len)
+		ncopy = 1;
+		if (n < 0)
+		{
+			i++;
+			n = -n;
+			ft_putchar_fd(45, fd);
+		}
+		while (++i < ft_intlen(n))
 			ncopy *= 10;
-		n /= ncopy;
-		write(fd, n + 48, 1);
-		ft_putnbr_fd(n, fd);
+		ft_putchar_fd(n / ncopy + 48, fd);
+		ft_putnbr_fd(n % ncopy, fd);
 	}
+}
+
+int main(int ac, char **av)
+{
+	if (ac == 2)
+		ft_putnbr_fd(ft_atoi(av[1]), 1);
 }
