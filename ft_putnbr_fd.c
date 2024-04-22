@@ -1,30 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/21 19:07:11 by htrindad          #+#    #+#             */
-/*   Updated: 2024/04/22 13:36:20 by htrindad         ###   ########.fr       */
+/*   Created: 2024/04/22 14:36:49 by htrindad          #+#    #+#             */
+/*   Updated: 2024/04/22 15:14:25 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+static int	ft_intlen(int n)
 {
-	unsigned int	i;
-	char			*dup;
+	int	count;
 
-	i = 0;
-	dup = ft_strdup(s);
-	if (!dup)
-		return (dup);
-	while (i < ft_strlen(dup))
+	count = n < 0;
+	while (n)
 	{
-		dup[i] = (*f)(i, dup[i]);
-		i++;
+		count++;
+		n /= 10;
 	}
-	return (dup);
+	return (count);
+}
+
+void	ft_putnbr_fd(int n, int fd)
+{
+	int	len;
+	int	ncopy;
+	int	i;
+
+	len = ft_intlen(n);
+	if (!len)
+		write(fd, 48, 1);
+	else
+	{
+		ncopy = n;
+		i = -1;
+		while (++i < len)
+			ncopy *= 10;
+		n /= ncopy;
+		write(fd, n + 48, 1);
+		ft_putnbr_fd(n, fd);
+	}
 }
