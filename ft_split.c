@@ -1,85 +1,88 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
+/*                       MOK                                 :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/20 14:53:46 by htrindad          #+#    #+#             */
-/*   Updated: 2024/04/20 16:53:32 by htrindad         ###   ########.fr       */
+/*   Created: 2024/04/23 18:51:24 by htrindad          #+#    #+#             */
+/*   Updated: 2024/04/23 19:31:46 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_countc(char const *s, char c)
+static int ft_tcount(char const *s, char c)
 {
-	size_t	count;
-
-	count = 0;
+	int token;
+	
+	token = 0;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s != c)
 		{
-			while (*s == c && *s)
+			token++;
+			while (*s && *s != c)
 				s++;
-			if (*s)
-				count++;
 		}
 		else
 			s++;
 	}
-	return (count);
+	return (token);
 }
 
-static uint8_t	ft_stringate(char **ss, char const *s, char c)
+static int	ft_ca(char **ptr, int j)
 {
-	size_t	x;
-	size_t	y;
-	size_t	z;
-
-	x = 0;
-	y = 0;
-	z = 0;
-	while (s[x])
+	if (ptr[j] == NULL)
 	{
-		if (s[x] == c)
-			x++;
-		else
+		while (j >= 0)
 		{
-			y = x;
-			while (s[y] && s[y] != c)
-				y++;
-			ss[z++] = ft_substr(s, x, y - x);
-			if (!ss[z - 1])
+			free(ptr[j]);
+			j--;
+		}
+		free(ptr);
+		return (0);
+	}
+	return (1);
+}
+
+static int	ft_la(char const *s, char c, char **ptr, int i)
+{
+	int	sta;
+	int	j;
+
+	j = 0;
+	while(s[i])
+	{
+		while (s[i] == c && s[i])
+			i++;
+		if (s[i] != c && s[i])
+		{
+			sta = i;
+			while (s[i] && s[i] != c)
+				i++;
+			ptr[j] = ft_substr(s, sta, i - sta);
+			if (!ft_ca(ptr, j))
 				return (0);
-			x = y;
+			j++;
 		}
 	}
 	return (1);
 }
 
-static void	*ft_nullify(char **ss, size_t count)
-{
-	while (count--)
-		free(ss[count]);
-	free(ss);
-	return (NULL);
-}
-
 char	**ft_split(char const *s, char c)
 {
-	size_t	count;
-	char	**ss;
+	int	token;
+	char	**ptr;
 
 	if (s == NULL)
 		return (NULL);
-	count = ft_countc(s, c);
-	ss = malloc((count + 1) * sizeof(char *));
-	if (!ss)
+	token = ft_tcount(s, c);
+	ptr = malloc((token + 1) * sizeof(char *));
+	if (ptr == NULL)
 		return (NULL);
-	ss[count] = NULL;
-	if (!ft_stringate(ss, s, c))
-		return (ft_nullify(ss, count));
-	return (ss);
+	if (!ft_la(s, c, ptr, 0))
+		return (NULL);
+	ptr[token] = NULL;
+	return (ptr);
 }
