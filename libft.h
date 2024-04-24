@@ -6,7 +6,7 @@
 /*   By: htrindad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 19:13:14 by htrindad          #+#    #+#             */
-/*   Updated: 2024/04/23 19:43:23 by htrindad         ###   ########.fr       */
+/*   Updated: 2024/04/24 17:46:27 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,7 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+t_list		ft_lstnew(void *content);
+void		ft_lstadd_front(t_list **list, t_list *new);
 
 #endif

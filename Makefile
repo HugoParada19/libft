@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/04/24 17:08:01 by htrindad          #+#    #+#              #
+#    Updated: 2024/04/24 17:56:44 by htrindad         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libft.a
 
 SRC = ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c\
@@ -7,7 +19,11 @@ ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c ft_calloc.c ft_substr.c\
 ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c\
 ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
+BONUS = ft_lstnew.c ft_lstadd_front.c
+
 OBJS = $(SRC:.c=.o)
+
+BONUS_OBJ = $(BONUS:.c=.o)
 
 CFLAGS = -Wall -Wextra -Werror -O3
 
