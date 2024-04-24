@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                       MOK                                 :::      ::::::::   */
+/*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/23 18:51:24 by htrindad          #+#    #+#             */
-/*   Updated: 2024/04/23 19:31:46 by htrindad         ###   ########.fr       */
+/*   Created: 2024/04/23 19:39:53 by htrindad          #+#    #+#             */
+/*   Updated: 2024/04/23 19:42:22 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int ft_tcount(char const *s, char c)
+static int	ft_tcount(char const *s, char c)
 {
-	int token;
-	
+	int	token;
+
 	token = 0;
 	while (*s)
 	{
@@ -52,7 +52,7 @@ static int	ft_la(char const *s, char c, char **ptr, int i)
 	int	j;
 
 	j = 0;
-	while(s[i])
+	while (s[i])
 	{
 		while (s[i] == c && s[i])
 			i++;
@@ -72,7 +72,7 @@ static int	ft_la(char const *s, char c, char **ptr, int i)
 
 char	**ft_split(char const *s, char c)
 {
-	int	token;
+	int		token;
 	char	**ptr;
 
 	if (s == NULL)
