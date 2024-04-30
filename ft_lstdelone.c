@@ -6,7 +6,7 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 16:55:08 by htrindad          #+#    #+#             */
-/*   Updated: 2024/04/25 16:57:33 by htrindad         ###   ########.fr       */
+/*   Updated: 2024/04/30 19:21:26 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,8 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (!del)
+	if (!del || !lst)
 		return ;
-	if (lst)
-	{
-		(*del)(lst->content);
-		free(lst);
-	}
+	(*del)(lst->content);
+	free(lst);
 }
