@@ -6,7 +6,7 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 19:46:01 by htrindad          #+#    #+#             */
-/*   Updated: 2024/04/24 17:02:26 by htrindad         ###   ########.fr       */
+/*   Updated: 2024/04/30 19:09:28 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*new;
 
-	new = (t_list *)malloc(sizeof(t_list));
+	new = malloc(sizeof(t_list));
 	if (new == NULL)
 		return (NULL);
 	new->content = content;

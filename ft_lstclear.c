@@ -6,7 +6,7 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 16:58:14 by htrindad          #+#    #+#             */
-/*   Updated: 2024/04/30 16:18:41 by htrindad         ###   ########.fr       */
+/*   Updated: 2024/04/30 19:03:10 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,13 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
+	t_list	*tmp;
+
 	if (!del || !lst || !*lst)
 		return ;
-	while (*lst->next)
+	while (*lst)
 	{
-		(*del)(lst->content);
-		free(*lst);
-		*lst = lst->new;
+		tmp = (*lst)->next;
+		ft_lstdelone(*lst, del);
 	}
-	(*del)(lst->content);
-	free(*lst);
-	*lst = NULL;
 }

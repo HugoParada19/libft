@@ -6,7 +6,7 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 16:20:12 by htrindad          #+#    #+#             */
-/*   Updated: 2024/04/30 16:26:26 by htrindad         ###   ########.fr       */
+/*   Updated: 2024/04/30 19:04:56 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	while (lst)
 	{
 		f(lst->content);
-		lst = lst->new;
+		lst = lst->next;
 	}
 }
