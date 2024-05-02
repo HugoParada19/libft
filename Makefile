@@ -6,7 +6,7 @@
 #    By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 17:08:01 by htrindad          #+#    #+#              #
-#    Updated: 2024/05/02 14:15:53 by htrindad         ###   ########.fr        #
+#    Updated: 2024/05/02 14:43:02 by htrindad         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,10 +31,10 @@ CFLAGS = -Wall -Wextra -Werror -O3
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar src $(NAME) $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
 bonus: $(BONUS_OBJ)
-	ar src $(NAME) $(BONUS_OBJ)
+	ar rcs $(NAME)
 
 clean:
 	rm -rf $(OBJS)
