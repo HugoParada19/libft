@@ -6,7 +6,7 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 16:58:14 by htrindad          #+#    #+#             */
-/*   Updated: 2024/04/30 19:03:10 by htrindad         ###   ########.fr       */
+/*   Updated: 2024/05/02 14:18:52 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	{
 		tmp = (*lst)->next;
 		ft_lstdelone(*lst, del);
+		*lst = tmp;
 	}
 }

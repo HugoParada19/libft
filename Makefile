@@ -6,7 +6,7 @@
 #    By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 17:08:01 by htrindad          #+#    #+#              #
-#    Updated: 2024/04/30 19:15:39 by htrindad         ###   ########.fr        #
+#    Updated: 2024/05/02 14:15:53 by htrindad         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c\
 ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
 BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstclear.c\
-ft_lstiter.c ft_lstmap.c ft_lstadd_back.c
+ft_lstiter.c ft_lstmap.c ft_lstadd_back.c ft_lstdelone.c
 
 OBJS = $(SRC:.c=.o)
 

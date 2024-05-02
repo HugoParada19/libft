@@ -6,7 +6,7 @@
 /*   By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 16:27:24 by htrindad          #+#    #+#             */
-/*   Updated: 2024/04/30 19:12:24 by htrindad         ###   ########.fr       */
+/*   Updated: 2024/05/02 14:22:21 by htrindad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	if (!nlst)
 		return (NULL);
 	nn = nlst;
+	lst = lst->next;
 	while (lst)
 	{
 		nlst->next = ft_lstnew(f(lst->content));
