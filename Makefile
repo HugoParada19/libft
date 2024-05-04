@@ -6,7 +6,7 @@
 #    By: htrindad <htrindad@student.42lisboa.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 17:08:01 by htrindad          #+#    #+#              #
-#    Updated: 2024/05/02 17:48:58 by htrindad         ###   ########.fr        #
+#    Updated: 2024/05/04 12:46:18 by htrindad         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,14 +33,14 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
-bonus: $(BONUS_OBJ)
-	ar rcs $(NAME) $(BONUS_OBJ)
+bonus: $(OBJS) $(BONUS_OBJ)
+	ar rcs $(NAME) $(OBJS) $(BONUS_OBJ)
 
 clean:
 	rm -rf $(OBJS)
 
 clean_bonus:
-	rm -rf $(BONUS_OBJ)
+	rm -rf $(BONUS_OBJ) $(OBJS)
 
 fclean: clean clean_bonus
 	rm -f $(NAME)
