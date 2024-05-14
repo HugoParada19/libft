@@ -69,6 +69,7 @@
 ## __War Machine__
 
 | FUNCTION | NORME | COMPIL | FORBIDDEN FUNC | TESTS | RESULT |
+| --- | --- | --- | --- | --- | --- |
 | ft_memset | ok | success clean | ✓✓✓✓ |OK |
 | ft_bzero | ok | success clean | ✓✓ | OK |
 | ft_calloc | ok | success clean | ✓ | OK |
