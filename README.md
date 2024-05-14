@@ -93,14 +93,18 @@
 | ft_isprint | ok | success clean | ✓✓✓✓✓✓✓ | OK |
 | ft_toupper | ok | success clean | ✓✓✓✓✓✓✓ | OK |
 | ft_tolower | ok | success clean | ✓✓✓✓✓✓✓ | OK |
-ft_strmapi | ok | success clean | ✓ | OK |
-ft_substr | ok | success clean | ✓✓✓✓✓ | OK |
-ft_strjoin | ok | success clean | ✓✓✓✓ | OK |
-ft_strtrim | ok | success clean | ✓✓✓✓✓ | OK |
-ft_split | ok | success clean | ✓✓✓✓✓✓ | OK |
-ft_itoa | ok | success clean | ✓✓✓✓✓✓✓✓✓✓ | OK |
-ft_striteri | ok | success clean | ✓ | OK |
-ft_putchar_fd | ok | success clean | ✓✓✓✓✓✓✓ | OK |
-ft_putstr_fd | ok | success clean | ✓✓✓✓ | OK |
-ft_putendl_fd | ok | success clean | ✓✓✓✓ | OK |
-ft_putnbr_fd | ok | success clean | ✓✓✓✓✓✓✓✓✓ | OK |
+| ft_strmapi | ok | success clean | ✓ | OK |
+| ft_substr | ok | success clean | ✓✓✓✓✓ | OK |
+| ft_strjoin | ok | success clean | ✓✓✓✓ | OK |
+| ft_strtrim | ok | success clean | ✓✓✓✓✓ | OK |
+| ft_split | ok | success clean | ✓✓✓✓✓✓ | OK |
+| ft_itoa | ok | success clean | ✓✓✓✓✓✓✓✓✓✓ | OK |
+| ft_striteri | ok | success clean | ✓ | OK |
+| ft_putchar_fd | ok | success clean | ✓✓✓✓✓✓✓ | OK |
+| ft_putstr_fd | ok | success clean | ✓✓✓✓ | OK |
+| ft_putendl_fd | ok | success clean | ✓✓✓✓ | OK |
+| ft_putnbr_fd | ok | success clean | ✓✓✓✓✓✓✓✓✓ | OK |
+
+## __Moulinette__
+
+![](imgs/moulinette.png)
