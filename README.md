@@ -65,3 +65,41 @@
 | ft_lstclear | 1.OK |
 | ft_lstiter | 1.OK 2.OK 3.OK 4.OK |
 | ft_lstmap | 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK|
+
+## __War Machine__
+
+| FUNCTION | NORME | COMPIL | FORBIDDEN FUNC | TESTS | RESULT |
+| ft_memset | ok | success clean | ✓✓✓✓ |OK |
+| ft_bzero | ok | success clean | ✓✓ | OK |
+| ft_calloc | ok | success clean | ✓ | OK |
+| ft_memcpy | ok | success clean | ✓✓✓ | OK |
+| ft_memmove | ok | success clean | ✓✓✓✓✓ | OK |
+| ft_memchr | ok | success clean | ✓✗✓✓✓✗ | KO |
+| ft_memcmp | ok | success clean | ✓✓✓✓✓✓✓✓✓ | OK |
+| ft_strlen | ok | success clean | ✓✓✓✓✓✓ | OK |
+| ft_strdup | ok | success clean | ✓ | OK |
+| ft_strlcat | ok | success clean | ✓✓✓✓✓✓✓✓✓ | OK |
+| ft_strlcpy | ok | success clean | ✓✓✓✓✓ | OK |
+| ft_strchr | ok | success clean | ✓✓✓✓✓✓ | OK |
+| ft_strrchr | ok | success clean | ✓✓✓✓✓✓✓✓ | OK |
+| ft_strnstr | ok | success clean | ✓✓✓✓✓✓✓✓✓✓ | OK |
+| ft_strncmp | ok | success clean | ✓✓✓✓✓✓✓✓✓✓✓ | OK |
+| ft_atoi | ok | success clean | ✓✓✓✓✓✓✓✓✓✓✓✓✓✓✓✓✓✓✓ | OK |
+| ft_isalpha | ok | success clean | ✓✓✓✓✓✓✓ | OK |
+| ft_isdigit | ok | success clean | ✓✓✓✓✓✓✓ | OK |
+| ft_isalnum | ok | success clean | ✓✓✓✓✓✓✓ | OK |
+| ft_isascii | ok | success clean | ✓✓✓✓✓✓✓✓ | OK |
+| ft_isprint | ok | success clean | ✓✓✓✓✓✓✓ | OK |
+| ft_toupper | ok | success clean | ✓✓✓✓✓✓✓ | OK |
+| ft_tolower | ok | success clean | ✓✓✓✓✓✓✓ | OK |
+ft_strmapi | ok | success clean | ✓ | OK |
+ft_substr | ok | success clean | ✓✓✓✓✓ | OK |
+ft_strjoin | ok | success clean | ✓✓✓✓ | OK |
+ft_strtrim | ok | success clean | ✓✓✓✓✓ | OK |
+ft_split | ok | success clean | ✓✓✓✓✓✓ | OK |
+ft_itoa | ok | success clean | ✓✓✓✓✓✓✓✓✓✓ | OK |
+ft_striteri | ok | success clean | ✓ | OK |
+ft_putchar_fd | ok | success clean | ✓✓✓✓✓✓✓ | OK |
+ft_putstr_fd | ok | success clean | ✓✓✓✓ | OK |
+ft_putendl_fd | ok | success clean | ✓✓✓✓ | OK |
+ft_putnbr_fd | ok | success clean | ✓✓✓✓✓✓✓✓✓ | OK |
