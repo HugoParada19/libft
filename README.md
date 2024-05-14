@@ -16,6 +16,7 @@
 
 <h1 align="center">Tests</h1>
 
+| : --- | --- : |
 | ft_memset | 1.OK 2.OK |
 | ft_bzero | 1.OK 2.OK 3.OK |
 | ft_memcpy | 1.OK 2.OK 3.OK |
