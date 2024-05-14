@@ -16,7 +16,7 @@
 
 <h1 align="center">Tests</h1>
 
-## __LIBFT TESTER By Tripouille__
+## [__LIBFT TESTER By Tripouille__](https://github.com/Tripouille/libftTester)
 | [Mandatory] |     |
 | --- | --- |
 | ft_memset | 1.OK 2.OK |
@@ -66,7 +66,7 @@
 | ft_lstiter | 1.OK 2.OK 3.OK 4.OK |
 | ft_lstmap | 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK|
 
-## __War Machine__
+## [__War Machine__](https://github.com/0x050f/libft-war-machine)
 
 | FUNCTION | NORME | COMPIL | FORBIDDEN FUNC | TESTS RESULT |
 | --- | --- | --- | --- | --- |
