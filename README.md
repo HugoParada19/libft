@@ -16,7 +16,7 @@
 
 <h1 align="center">Tests</h1>
 
-##__LIBFT TESTER By Tripouille__
+## __LIBFT TESTER By Tripouille__
 | [Mandatory] |     |
 | --- | --- |
 | ft_memset | 1.OK 2.OK |
