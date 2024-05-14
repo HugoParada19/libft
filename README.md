@@ -16,7 +16,7 @@
 
 <h1 align="center">Tests</h1>
 
-|     |     |
+| [Mandatory] |     |
 | --- | --- |
 | ft_memset | 1.OK 2.OK |
 | ft_bzero | 1.OK 2.OK 3.OK |
@@ -53,6 +53,8 @@
 | ft_putnbr_fd | 1.OK 2.OK 3.OK 4.OK 5.OK |
 | ft_striteri | 1.OK 2.OK 3.OK|
 
+| [Bonus] |     |
+| --- | --- |
 | ft_lstnew | 1.OK 2.OK 3.MOK |
 | ft_lstadd_front | 1.OK 2.OK 3.OK 4.OK 5.OK |
 | ft_lstsize | 1.OK 2.OK 3.OK |
