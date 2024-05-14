@@ -8,4 +8,6 @@
 
 <p align="center"><img alt="Static Badge" src="https://img.shields.io/badge/NeoVim%20-%20Text%20Editor?style=plastic&logo=NeoVim&logoSize=500&label=Text%20Editor&color=light%20green" />
 <img alt="Static Badge" src="https://img.shields.io/badge/GPL%20-%20License?style=plastic&logo=GNU&logoColor=red&logoSize=500&label=License&color=red" />
+<img alt="Static Badge" src="https://img.shields.io/badge/Finished%20-%20Status?style=plastic&logoSize=500&label=Status">
+<img alt="Static Badge" src="https://img.shields.io/badge/C%20-%20Language?style=plastic&logo=C&logoSize=500&label=Language&color=blue">
 </p>
