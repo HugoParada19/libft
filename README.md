@@ -11,3 +11,9 @@
 <img alt="Static Badge" src="https://img.shields.io/badge/Finished%20-%20Status?style=plastic&logoSize=500&label=Status">
 <img alt="Static Badge" src="https://img.shields.io/badge/C%20-%20Language?style=plastic&logo=C&logoSize=500&label=Language&color=blue">
 </p>
+
+*This is my version of Libft under the GPL license. I created this project not just for my self to get back to these functions but also to give the new people a reference to follow themselves by.*
+
+<h1 align="center">Tests</h1>
+
+
